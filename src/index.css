@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 274 53% 37%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 274 53% 37%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 274 53% 37%;
+ 
+    --primary: 274 53% 37%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 281 54% 37%;
+    --secondary-foreground: 0 0% 100%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 288 56% 37%;
+    --accent-foreground: 0 0% 100%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 274 53% 37%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 274 53% 37%;
+    --foreground: 0 0% 100%;
+ 
+    --card: 274 53% 37%;
+    --card-foreground: 0 0% 100%;
+ 
+    --popover: 274 53% 37%;
+    --popover-foreground: 0 0% 100%;
+ 
+    --primary: 0 0% 100%;
+    --primary-foreground: 274 53% 37%;
+ 
+    --secondary: 288 56% 37%;
+    --secondary-foreground: 0 0% 100%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 281 54% 37%;
+    --accent-foreground: 0 0% 100%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+/* Add gradient background utility */
+.bg-brand-gradient {
+  background: linear-gradient(
+    to right,
+    hsl(196deg 100% 47%) 0%,
+    hsl(198deg 100% 46%) 0%,
+    hsl(200deg 97% 46%) 1%,
+    hsl(204deg 81% 49%) 3%,
+    hsl(209deg 71% 50%) 5%,
+    hsl(214deg 64% 51%) 8%,
+    hsl(220deg 57% 52%) 12%,
+    hsl(228deg 49% 52%) 16%,
+    hsl(238deg 40% 52%) 22%,
+    hsl(251deg 40% 48%) 29%,
+    hsl(263deg 45% 43%) 37%,
+    hsl(274deg 53% 37%) 46%,
+    hsl(281deg 54% 37%) 55%,
+    hsl(288deg 56% 37%) 64%,
+    hsl(295deg 58% 37%) 72%,
+    hsl(302deg 61% 38%) 79%,
+    hsl(307deg 66% 39%) 85%,
+    hsl(311deg 71% 41%) 90%,
+    hsl(315deg 76% 42%) 94%,
+    hsl(318deg 82% 44%) 96%,
+    hsl(320deg 88% 45%) 98%,
+    hsl(322deg 95% 45%) 99%,
+    hsl(324deg 100% 46%) 100%
+  );
+}
